@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 9: Future Work & Innovation Suite — Govt. Degree College No. 1, D.I. Khan</title>
+  <link rel="stylesheet" href="css/future_work.css">
+  <script src="../js/chart.min.js"></script>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <header class="fw-header">
+    <div class="fw-header-top">
+      <div>
+        <span class="fw-badge">Chapter 9 • Future Work & Evolution</span>
+        <h1 class="fw-title">Institutional Innovation & Advanced Architecture Suite</h1>
+        <p class="fw-subtitle">
+          Govt. Degree College No. 1, Dera Ismail Khan (D.I. Khan) • BSCS Final Year Project (2022-26)<br>
+          Author: <strong>Imran (Roll No: CS-2210)</strong> | Supervisor: <strong>Prof. Abdur Rehman</strong>
+        </p>
+      </div>
+      <div>
+        <a href="../index.html" class="fw-nav-btn-back">
+          <span>⬅️</span> Return to Active Dashboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tab Bar -->
+  <nav class="fw-tab-bar">
+    <button class="fw-tab-btn active" id="tab-btn-ai" onclick="switchFwTab('ai')">
+      <span>🤖</span> 9.2 AI Risk Predictor
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-sms" onclick="switchFwTab('sms')">
+      <span>📱</span> 9.3 SMS & WhatsApp Gateway
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-iot" onclick="switchFwTab('iot')">
+      <span>🏷️</span> 9.4 IoT RFID & Biometrics
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-mobile" onclick="switchFwTab('mobile')">
+      <span>📲</span> 9.5 Mobile App Portal
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-pay" onclick="switchFwTab('pay')">
+      <span>💳</span> 9.6 Digital Payments
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-blockchain" onclick="switchFwTab('blockchain')">
+      <span>🔐</span> 9.7 Blockchain DMC Verifier
+    </button>
+    <button class="fw-tab-btn" id="tab-btn-db" onclick="switchFwTab('db')">
+      <span>🗄️</span> 9.8 SQL Database Migration
+    </button>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="fw-main">
+
+    <!-- ======================================================== -->
+    <!-- TAB 1: AI RISK PREDICTOR (Chapter 9.2)                    -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content active" id="tab-content-ai">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>🤖</span> Chapter 9.2: Machine Learning Early Academic Risk & Dropout Classifier
+          </div>
+          <a href="ai_prediction/model_prototype.py" class="fw-source-link" target="_blank">📄 View Python Script</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Trained on historical semester data using <strong>Random Forest & Logistic Regression</strong> algorithms (94.67% accuracy). 
+          Predicts whether a student is at danger of failing or receiving short-attendance fines based on real-time mark patterns.
+        </p>
+
+        <div class="fw-grid-2">
+          <!-- Input Form -->
+          <div style="background: #f8fafc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #0f172a;">Adjust Predictive Features</h3>
+
+            <div class="fw-input-group">
+              <label>Attendance Percentage (%):</label>
+              <input type="number" id="ai-input-attend" class="fw-input" value="62" min="0" max="100" oninput="runAIPrediction()">
+              <small style="color: #64748b; font-size: 0.75rem;">Threshold: 75% (Short attendance incurs Rs. 1,000 fine)</small>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div class="fw-input-group">
+                <label>Sessional (Max 6):</label>
+                <input type="number" id="ai-input-sessional" class="fw-input" value="3.2" step="0.1" min="0" max="6" oninput="runAIPrediction()">
+              </div>
+              <div class="fw-input-group">
+                <label>Midterm (Max 18):</label>
+                <input type="number" id="ai-input-mid" class="fw-input" value="9.5" step="0.1" min="0" max="18" oninput="runAIPrediction()">
+              </div>
+            </div>
+
+            <div class="fw-input-group">
+              <label>Terminal Final (Max 36):</label>
+              <input type="number" id="ai-input-term" class="fw-input" value="18.0" step="0.1" min="0" max="36" oninput="runAIPrediction()">
+            </div>
+
+            <div class="fw-input-group">
+              <label>Previous Academic Probation History:</label>
+              <select id="ai-input-probation" class="fw-select" onchange="runAIPrediction()">
+                <option value="0">No (First Time Warning)</option>
+                <option value="1">Yes (Previous Warning Issued)</option>
+              </select>
+            </div>
+
+            <button class="fw-btn" onclick="runAIPrediction()">Run AI Inference</button>
+          </div>
+
+          <!-- Live Output Panel -->
+          <div style="background: #ffffff; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #0f172a;">Live Model Inference Output</h3>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="fw-metric-callout">
+                  <div class="val" id="ai-res-score" style="color: #ef4444;">84%</div>
+                  <div class="lbl">Predicted Failure Risk</div>
+                </div>
+                <div class="fw-metric-callout">
+                  <div class="val" id="ai-res-gpa" style="color: #0284c7;">2.15 / 4.00</div>
+                  <div class="lbl">Estimated Final GPA</div>
+                </div>
+              </div>
+
+              <div style="background: #f8fafc; padding: 0.85rem; border-radius: 6px; border-left: 4px solid #ef4444; margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: #64748b; font-weight: 700;">CLASSIFICATION:</div>
+                <div id="ai-res-class" style="font-size: 1rem; font-weight: 800; color: #ef4444; margin-top: 2px;">
+                  CRITICAL / AT-RISK (Dropout Danger)
+                </div>
+              </div>
+
+              <div>
+                <strong style="font-size: 0.85rem; color: #334155;">Prescribed Interventions:</strong>
+                <ul id="ai-res-recs" style="font-size: 0.8rem; color: #475569; padding-left: 1.25rem; margin-top: 6px;"></ul>
+              </div>
+            </div>
+
+            <div style="font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #f1f5f9; padding-top: 8px;">
+              Model Evaluation: 94.67% Accuracy • N=300 Training Records (`future_work/ai_prediction/`)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 2: SMS & WHATSAPP GATEWAY (Chapter 9.3)              -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-sms">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>📱</span> Chapter 9.3: Automated SMS & WhatsApp Parent Alert Gateway
+          </div>
+          <a href="sms_gateway/sms_service.js" class="fw-source-link" target="_blank">📄 View Dispatcher Code</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Integrates Twilio SMS and WhatsApp Business Cloud API to dispatch bilingual automated notices in <strong>English and Urdu (اردو)</strong> 
+          whenever attendance drops below 75% or a fine is levied.
+        </p>
+
+        <div class="fw-grid-2">
+          <!-- Control Panel -->
+          <div>
+            <div class="fw-input-group">
+              <label>Select Target Student:</label>
+              <select id="sms-student-select" class="fw-select">
+                <option value="Muhammad Bilal - CS-2215">Muhammad Bilal (CS-2215) • Attendance: 62% [At-Risk]</option>
+                <option value="Hamza Khan - MATH-2208">Hamza Khan (MATH-2208) • Attendance: 58% [At-Risk]</option>
+                <option value="Ali Raza - CS-2201">Ali Raza (CS-2201) • Attendance: 95% [Safe]</option>
+              </select>
+            </div>
+
+            <div class="fw-input-group">
+              <label>Notification Language:</label>
+              <select id="sms-lang-select" class="fw-select">
+                <option value="en">English (Official Format)</option>
+                <option value="ur">Urdu / اردو (For Parents in D.I. Khan)</option>
+              </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem;">
+              <button class="fw-btn" onclick="sendSimulatedAlert('ATTENDANCE_WARNING')">
+                <span>⚠️</span> Trigger Attendance Shortage Alert (&lt; 75%)
+              </button>
+              <button class="fw-btn" style="background: #dc2626;" onclick="sendSimulatedAlert('FINE_NOTICE')">
+                <span>💳</span> Send Rs. 1,000 Fine Levied Demand Note
+              </button>
+              <button class="fw-btn" style="background: #10b981;" onclick="sendSimulatedAlert('RESULT_ALERT')">
+                <span>🎓</span> Send Exam DMC Result Declaration
+              </button>
+            </div>
+
+            <div id="sms-delivery-status" style="margin-top: 1rem; font-size: 0.8rem; color: #16a34a; font-weight: 600;"></div>
+          </div>
+
+          <!-- Smartphone Mockup -->
+          <div class="phone-mockup-wrapper">
+            <div class="phone-mockup">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="sms-chat-header">
+                  <div>Govt. Degree College No. 1</div>
+                  <div style="font-size: 0.65rem; color: #38bdf8;">Official Parent Notification Gateway</div>
+                </div>
+                <div class="sms-messages-area" id="sms-mockup-messages">
+                  <div class="sms-bubble">
+                    <div style="font-weight: 700; color: #0284c7; margin-bottom: 4px;">📲 GDC-DIKHAN SMS GATEWAY</div>
+                    <div>Welcome to GDC No. 1 D.I. Khan Parent Academic Alert Service. Official notifications will be delivered here.</div>
+                    <div class="sms-time">System • Active</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 3: IOT RFID & BIOMETRICS (Chapter 9.4)               -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-iot">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>🏷️</span> Chapter 9.4: IoT Biometric & RFID Attendance Terminal
+          </div>
+          <a href="iot_rfid/arduino_rfid_firmware.ino" class="fw-source-link" target="_blank">📄 View Arduino Sketch (.ino)</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Hardware integration utilizing <strong>ESP32, MFRC522 RFID Card Readers, and R307 Optical Fingerprint Scanners</strong>. 
+          Replaces manual paper rolls with instant RFID card taps and serial-to-web streaming.
+        </p>
+
+        <div class="fw-grid-2">
+          <!-- Terminal Hardware Mockup -->
+          <div class="rfid-hardware-box">
+            <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 700;">
+              Embedded IoT Terminal • CS Dept Entrance
+            </div>
+            
+            <div class="rfid-lcd-screen" id="rfid-lcd-screen">
+              GDC #1 D.I. KHAN<br>
+              <small style="color: #a7f3d0;">Tap Smart Card or Thumb</small>
+            </div>
+
+            <div class="rfid-tap-target" id="rfid-tap-target" onclick="triggerRFIDTap('E5F6G7H8')">
+              <span style="font-size: 2.2rem;">📡</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #38bdf8; margin-top: 4px;">TAP TO SCAN</span>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="fw-btn" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.75rem; background: #334155;" onclick="triggerRFIDTap('A1B2C3D4')">
+                Card 1: Ali Raza (95%)
+              </button>
+              <button class="fw-btn" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.75rem; background: #334155;" onclick="triggerRFIDTap('E5F6G7H8')">
+                Card 2: Imran Burki (88%)
+              </button>
+              <button class="fw-btn" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.75rem; background: #dc2626;" onclick="triggerRFIDTap('99AA88BB')">
+                Card 3: Bilal (62% At-Risk)
+              </button>
+            </div>
+          </div>
+
+          <!-- Real-Time Event Log -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: #0f172a;">Live Hardware Attendance Feed (WebSockets)</h3>
+            <div style="max-height: 280px; overflow-y: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+                <thead>
+                  <tr style="background: #f1f5f9; text-align: left;">
+                    <th style="padding: 6px;">Time</th>
+                    <th style="padding: 6px;">Roll No</th>
+                    <th style="padding: 6px;">Student</th>
+                    <th style="padding: 6px;">Dept</th>
+                    <th style="padding: 6px;">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="rfid-log-tbody">
+                  <tr>
+                    <td style="padding: 6px; font-family: monospace;">08:14:22</td>
+                    <td style="padding: 6px; font-weight: 700;">CS-2201</td>
+                    <td style="padding: 6px;">Ali Raza</td>
+                    <td style="padding: 6px;">CS</td>
+                    <td style="padding: 6px;"><span style="color: #16a34a; font-weight: 700;">PRESENT</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 4: MOBILE APP PORTAL (Chapter 9.5)                   -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-mobile">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>📲</span> Chapter 9.5: Cross-Platform Student & Parent Mobile App
+          </div>
+          <a href="mobile_app/App.js" class="fw-source-link" target="_blank">📄 View React Native App.js</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Cross-platform architecture engineered in <strong>React Native / Flutter</strong> for iOS and Android. 
+          Allows students and parents to check attendance eligibility gauges, view semester GPA progression, and display a digital offline student smart card.
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="padding: 16px; font-size: 0.85rem;">
+              <div style="background: #0e2238; color: #ffffff; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 12px;">
+                <div style="font-weight: 700; font-size: 0.85rem;">GDC No. 1, D.I. Khan</div>
+                <div style="font-size: 0.65rem; color: #94a3b8;">Student Self-Service Portal</div>
+              </div>
+
+              <!-- Student Smart Card inside phone -->
+              <div style="background: #ffffff; border-radius: 8px; border-left: 4px solid #f59e0b; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 12px;">
+                <div style="font-size: 0.65rem; color: #64748b; font-weight: 700;">STUDENT SMART ID</div>
+                <div style="font-size: 1.1rem; font-weight: 800; color: #0e2238; margin-top: 2px;">Imran Burki</div>
+                <div style="font-size: 0.8rem; color: #0284c7; font-weight: 600;">Roll: CS-2210 • BSCS (2022-26)</div>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 2px;">Dept: Computer Science • Sem 4</div>
+              </div>
+
+              <!-- Metrics -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+                <div style="background: #ffffff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0;">
+                  <div style="font-size: 0.65rem; color: #64748b; font-weight: 700;">CGPA</div>
+                  <div style="font-size: 1.3rem; font-weight: 800; color: #0284c7;">3.82</div>
+                  <div style="font-size: 0.65rem; color: #10b981;">Passed • Grade A</div>
+                </div>
+                <div style="background: #ffffff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0;">
+                  <div style="font-size: 0.65rem; color: #64748b; font-weight: 700;">ATTENDANCE</div>
+                  <div style="font-size: 1.3rem; font-weight: 800; color: #10b981;">88.5%</div>
+                  <div style="font-size: 0.65rem; color: #10b981;">Eligible for Exam</div>
+                </div>
+              </div>
+
+              <!-- Button list -->
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <button class="fw-btn" style="padding: 10px; font-size: 0.75rem;">📄 View Terminal DMC Result</button>
+                <button class="fw-btn" style="padding: 10px; font-size: 0.75rem; background: #1e293b;">💳 Fee & Fine Payment History</button>
+                <button class="fw-btn" style="padding: 10px; font-size: 0.75rem; background: #475569;">📞 Contact Academic Advisor</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 5: DIGITAL PAYMENTS (Chapter 9.6)                    -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-pay">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>💳</span> Chapter 9.6: Digital Fee & Fine Payment Gateway (JazzCash / EasyPaisa / Raast)
+          </div>
+          <a href="digital_payments/payment_gateway_mock.js" class="fw-source-link" target="_blank">📄 View Payment Gateway Code</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Eliminates long queues at college accounts counters by integrating domestic mobile financial services. 
+          Secured with <strong>HMAC-SHA256 digital signature verification</strong> and automatic ledger clearing.
+        </p>
+
+        <div class="fw-grid-2">
+          <!-- Payment Form -->
+          <div style="background: #f8fafc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <h3 style="font-size: 1rem; margin-bottom: 1rem; color: #0f172a;">Simulate Online Fine Payment</h3>
+
+            <div class="fw-input-group">
+              <label>Student Roll Number:</label>
+              <input type="text" id="pay-student-roll" class="fw-input" value="CS-2215" readonly>
+            </div>
+
+            <div class="fw-input-group">
+              <label>Student Name:</label>
+              <input type="text" id="pay-student-name" class="fw-input" value="Muhammad Bilal" readonly>
+            </div>
+
+            <div class="fw-input-group">
+              <label>Fine Reason & Amount:</label>
+              <input type="text" class="fw-input" value="Short Attendance Fine (< 75%) — Rs. 1,000" readonly style="color: #ef4444; font-weight: 700;">
+            </div>
+
+            <div class="fw-input-group">
+              <label>Payment Method:</label>
+              <select id="pay-method-select" class="fw-select">
+                <option value="JazzCash Mobile Account">JazzCash (Pakistan Mobile Communications Ltd.)</option>
+                <option value="EasyPaisa Mobile Account">EasyPaisa (Telenor Microfinance Bank)</option>
+                <option value="Raast Instant Payment P2G">Raast Instant Payment Gateway (State Bank of Pakistan)</option>
+                <option value="1Link Debit / Credit Card">1Link 1Bill Card Payment</option>
+              </select>
+            </div>
+
+            <div class="fw-input-group">
+              <label>Mobile Account / Card Number:</label>
+              <input type="text" id="pay-phone-input" class="fw-input" value="03001234567" placeholder="e.g. 03001234567">
+            </div>
+
+            <button class="fw-btn fw-btn-success" onclick="processFinePayment()">
+              <span>🔒</span> Pay Rs. 1,000 Now (Secure Checkout)
+            </button>
+          </div>
+
+          <!-- Digital Receipt Target -->
+          <div id="pay-receipt-target" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 6: BLOCKCHAIN DMC VERIFIER (Chapter 9.7)             -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-blockchain">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>🔐</span> Chapter 9.7: Blockchain & Cryptographic Credential Verification
+          </div>
+          <a href="blockchain_verification/transcript_hasher.js" class="fw-source-link" target="_blank">📄 View Hasher Code</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Eliminates certificate forgery by hashing official Detailed Marks Certificates into <strong>SHA-256 Merkle root fingerprints</strong>. 
+          Employers or universities can verify the authenticity of a degree transcript in milliseconds.
+        </p>
+
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem;">
+          <label style="font-weight: 700; font-size: 0.9rem; color: #1e293b; display: block; margin-bottom: 0.5rem;">
+            Enter Cryptographic DMC Hash to Verify:
+          </label>
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <input type="text" id="bc-input-hash" class="fw-input" style="font-family: monospace; font-size: 0.85rem;" placeholder="e.g. 0x7a89f92bc3e01d8f5619ca24e67d23a1e457f90c88b21e06917c0a894a28b5e1">
+            <button class="fw-btn" style="width: auto; padding: 0 1.5rem;" onclick="verifyBlockchainHash()">
+              Verify Authenticity
+            </button>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="fw-btn" style="width: auto; padding: 0.35rem 0.75rem; font-size: 0.75rem; background: #10b981;" onclick="pasteGenuineHash()">
+              Paste Valid Hash (Imran Burki - Genuine)
+            </button>
+            <button class="fw-btn" style="width: auto; padding: 0.35rem 0.75rem; font-size: 0.75rem; background: #ef4444;" onclick="pasteTamperedHash()">
+              Paste Tampered Hash (Simulated Forgery)
+            </button>
+          </div>
+        </div>
+
+        <div id="bc-result-box" style="display: none; padding: 1.25rem; border-radius: 8px; border: 1.5px solid #cbd5e1;"></div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 7: SQL DATABASE MIGRATION (Chapter 9.8)              -->
+    <!-- ======================================================== -->
+    <div class="fw-tab-content" id="tab-content-db">
+      <div class="fw-card">
+        <div class="fw-card-header">
+          <div class="fw-card-title">
+            <span>🗄️</span> Chapter 9.8: Centralized Multi-Campus SQL Database Migration
+          </div>
+          <a href="database/" class="fw-source-link" target="_blank">📁 View Database Folder</a>
+        </div>
+        <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Preserved for multi-campus expansion when GDC No. 1 D.I. Khan transitions from a local college installation to a centralized cloud database server.
+        </p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: #0f172a;">Available Migration Schemas in `future_work/database/`:</h4>
+          <ul style="font-size: 0.85rem; color: #475569; padding-left: 1.25rem; line-height: 1.8;">
+            <li><code>schema.mysql.sql</code> — Full 25-table Third Normal Form (3NF) relational schema with Foreign Keys and Indexes.</li>
+            <li><code>complete_import.sql</code> — Turnkey one-click import script compatible with phpMyAdmin and MySQL Workbench.</li>
+            <li><code>seed.mysql.sql</code> — Realistic GDC No. 1 D.I. Khan departmental seed records.</li>
+            <li><code>schema.sqlite.sql</code> — Embedded zero-server relational alternative.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="fw-footer">
+    <strong>Future Work & Innovation Suite</strong> — Govt. Degree College No. 1, Dera Ismail Khan<br>
+    Submitted by: <strong>Imran (Roll No: CS-2210)</strong> | Supervised by: <strong>Prof. Abdur Rehman</strong>
+  </footer>
+
+  <script src="js/futureWorkSuite.js"></script>
+</body>
+</html>

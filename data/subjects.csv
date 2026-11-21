@@ -1,0 +1,9 @@
+id,code,name,department,semester,credit_hours,teacher_name,max_sessional,max_mid,max_terminal,created_at
+1,CS-401,Database Systems,Computer Science,Semester 4,4,Engr. Waqas,20,30,50,2026-01-01T00:00:00Z
+2,CS-402,Data Structures & Algorithms,Computer Science,Semester 4,4,Prof. Irfanullah,20,30,50,2026-01-01T00:00:00Z
+3,CS-403,Operating Systems,Computer Science,Semester 4,4,Dr. Sajid Khan,20,30,50,2026-01-01T00:00:00Z
+4,CS-404,Computer Networks,Computer Science,Semester 4,3,Prof. Abdur Rehman,20,30,50,2026-01-01T00:00:00Z
+5,PHY-401,Quantum Mechanics,Physics,Semester 4,4,Dr. Muhammad Aslam,20,30,50,2026-01-01T00:00:00Z
+6,MATH-401,Linear Algebra,Mathematics,Semester 4,3,Prof. Tariq Bilal,20,30,50,2026-01-01T00:00:00Z
+7,CHEM-401,Organic Chemistry,Chemistry,Semester 4,4,Prof. Nisar Ahmad,20,30,50,2026-01-01T00:00:00Z
+8,ENG-401,Linguistics & Communication,English,Semester 4,3,Prof. Tahir,20,30,50,2026-01-01T00:00:00Z

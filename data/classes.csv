@@ -1,0 +1,7 @@
+id,class_name,department,semester,session,section,room_no,max_capacity,class_teacher,created_at
+1,BSCS-4th-Morning,Computer Science,Semester 4,2022-2026,A,IT Lab 1,50,Prof. Abdur Rehman,2026-01-01T00:00:00Z
+2,BSCS-4th-Evening,Computer Science,Semester 4,2022-2026,B,IT Lab 2,45,Dr. Sajid Khan,2026-01-01T00:00:00Z
+3,BS-Physics-4th,Physics,Semester 4,2022-2026,A,Science Block Rm 12,40,Dr. Muhammad Aslam,2026-01-01T00:00:00Z
+4,BS-Math-4th,Mathematics,Semester 4,2022-2026,A,Block C Rm 4,45,Prof. Tariq Bilal,2026-01-01T00:00:00Z
+5,BS-Chem-4th,Chemistry,Semester 4,2022-2026,A,Chemistry Lab 1,35,Prof. Nisar Ahmad,2026-01-01T00:00:00Z
+6,BS-English-4th,English,Semester 4,2022-2026,A,Humanities Rm 8,50,Prof. Tahir,2026-01-01T00:00:00Z

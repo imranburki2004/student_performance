@@ -1,0 +1,5 @@
+id,username,email,password_hash,role,name,department,student_id,status,created_at
+1,admin,admin@gdc1.edu.pk,$2a$10$wT8m9Lp0qZJ1rXyE8vF4O.r2k3W1mX0vE6o9r5L1k7t2q8v3p4s2e,admin,Imran (Author),Computer Science,CS-2210,active,2026-01-01T00:00:00Z
+2,rehman_faculty,rehman@gdc1.edu.pk,$2a$10$kP7v3m9Lp0qZJ1rXyE8vF.s3l4W2mY1wF7p0s6M2l8u3r9w4q5t3f,teacher,Prof. Abdur Rehman,Computer Science,,active,2026-01-01T00:00:00Z
+3,ali_cs2201,ali@gdc1.edu.pk,$2a$10$mQ8w4n0Mq1rAK2sYzF9wG.t4m5X3nZ2xG8q1t7N3m9v4s0x5r6u4g,student,Ali Raza,Computer Science,CS-2201,active,2026-01-01T00:00:00Z
+4,hassan_cs2204,hassan@gdc1.edu.pk,$2a$10$mQ8w4n0Mq1rAK2sYzF9wG.t4m5X3nZ2xG8q1t7N3m9v4s0x5r6u4g,student,Hassan Raza,Computer Science,CS-2204,active,2026-01-01T00:00:00Z

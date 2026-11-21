@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/**
+ * Design Tokens - Student Performance & Attendance Analytics Platform
+ * Modern Power BI & HCI-Optimized Theme
+ * Govt. Degree College No. 1, Dera Ismail Khan
+ */
+
+:root {
+  /* Brand Palette (Pandhowan Modern Light SaaS Aesthetic) */
+  --color-brand-primary: #4f46e5;       /* Royal Purple / Indigo (#4F46E5) */
+  --color-brand-secondary: #4338ca;     /* Deep Indigo (#4338CA) */
+  --color-brand-accent: #4f46e5;        /* Royal Purple / Indigo */
+  --color-brand-accent-hover: #4338ca;
+  --color-brand-cyan: #38bdf8;          /* Vibrant Cyan (#38BDF8) */
+  --color-brand-blue: #3b82f6;          /* Medium Blue (#3B82F6) */
+  --color-brand-indigo: #4338ca;        /* Deep Indigo (#4338CA) */
+  --color-brand-gold: #f59e0b;          /* Institutional Gold */
+
+  /* Neutral Surface & Background Colors (Light Mode Only - Pandhowan Style) */
+  --bg-app: #f8f9fa;                    /* Soft light-grey main background (#F8F9FA) */
+  --bg-surface: #ffffff;                /* Pure white cards (#FFFFFF) */
+  --bg-surface-subtle: #f9fafb;         /* Light containers & table headers */
+  --bg-surface-hover: #f3f4f6;
+  --bg-sidebar: #fafafa;                /* Crisp light/off-white sidebar (#FAFAFA) */
+  --bg-sidebar-active: #f3f4f6;         /* Soft light-grey rounded pill box */
+  --bg-sidebar-hover: #f3f4f6;
+
+  /* Typography Colors */
+  --text-primary: #111827;              /* Dark charcoal headings (#111827) */
+  --text-secondary: #374151;            /* Charcoal-700 (#374151) */
+  --text-muted: #6b7280;                /* Muted grey labels (#6B7280) */
+  --text-subtle: #9ca3af;               /* Slate-400 */
+  --text-inverse: #ffffff;
+  --text-sidebar: #4b5563;              /* Clean dark-grey sidebar links */
+  --text-sidebar-active: #111827;       /* Bold dark active text (#111827) */
+  --text-sidebar-muted: #9ca3af;
+
+  /* Semantic Status Colors */
+  --color-success: #10b981;             /* Emerald */
+  --color-success-bg: #ecfdf5;
+  --color-success-border: #a7f3d0;
+
+  --color-warning: #f59e0b;             /* Amber */
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+
+  --color-danger: #ef4444;              /* Rose Red */
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fecaca;
+
+  --color-info: #0284c7;                /* Sky Blue */
+  --color-info-bg: #f0f9ff;
+  --color-info-border: #bae6fd;
+
+  /* Border Colors (Light Theme Minimal 1px Border) */
+  --border-light: #e5e7eb;              /* Subtle thin 1px border (#E5E7EB) */
+  --border-medium: #d1d5db;
+  --border-dark: #9ca3af;
+
+  /* HCI-Focused Typography System (Inter / Plus Jakarta Sans / Poppins) */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Strict Visual Typography Hierarchy per HCI Specification */
+  --text-h1: 26px;                      /* Main page headings: 24---30 px (Bold: 700) */
+  --text-h2: 18px;                      /* Section headings: 16---20 px (SemiBold: 600) */
+  --text-kpi: 28px;                     /* KPI numbers: 24---32 px (Bold: 700) */
+  --text-card-lbl: 13px;                /* Card labels: 12---14 px (Medium: 500) */
+  --text-chart-lbl: 12px;               /* Chart labels: 11---13 px (Regular: 400) */
+  --text-table: 13px;                   /* Table content: 12---14 px (Regular: 400) */
+  --text-btn: 13.5px;                   /* Buttons: 13---14 px (SemiBold: 600) */
+  --font-size-caption: 11.5px;          /* Timestamps & Captions: 11px---12px (Muted Gray, #64748B) */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing Scale */
+  --space-xs: 0.25rem;  /* 4px */
+  --space-sm: 0.5rem;   /* 8px */
+  --space-md: 0.75rem;  /* 12px */
+  --space-lg: 1rem;     /* 16px */
+  --space-xl: 1.5rem;   /* 24px */
+  --space-2xl: 2rem;    /* 32px */
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows (Subtle, clean Power BI depth) */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px -1px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
+
+  /* Layout Constants */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --topbar-height: 64px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======================================================== */
+/* DARK MODE THEME PALETTE                                  */
+/* ======================================================== */
+[data-theme="dark"] {
+  --bg-app: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-subtle: #1f2937;
+  --bg-surface-hover: #1e293b;
+  --bg-sidebar: #0a0f1d;
+  --bg-sidebar-active: #1e293b;
+  --bg-sidebar-hover: #1e293b;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-inverse: #0f172a;
+
+  --border-light: #1f2937;
+  --border-medium: #374151;
+  --border-dark: #4b5563;
+
+  --color-slate-50: #111827;
+  --color-slate-100: #1f2937;
+  --color-slate-200: #374151;
+  --color-slate-300: #4b5563;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #cbd5e1;
+  --color-slate-600: #e2e8f0;
+  --color-slate-700: #f1f5f9;
+  --color-slate-800: #f8fafc;
+  --color-slate-900: #ffffff;
+}
+
+/* ======================================================== */
+/* HIGH-CONTRAST ACCESSIBILITY PALETTE                      */
+/* ======================================================== */
+[data-theme="high-contrast"] {
+  --bg-app: #000000;
+  --bg-surface: #000000;
+  --bg-surface-subtle: #121212;
+  --bg-surface-hover: #242424;
+  --bg-sidebar: #000000;
+
+  --text-primary: #ffffff;
+  --text-secondary: #ffff00;
+  --text-muted: #00ffff;
+  --text-subtle: #ffffff;
+
+  --border-light: #ffffff;
+  --border-medium: #ffffff;
+  --border-dark: #ffffff;
+
+  --color-brand-accent: #00e5ff;
+}

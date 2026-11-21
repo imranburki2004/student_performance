@@ -1,0 +1,7 @@
+id,employee_no,name,designation,department,email,phone,assigned_subjects,status,is_deleted,created_at
+1,FAC-101,Prof. Abdur Rehman,Assistant Professor & Supervisor,Computer Science,rehman@gdc1.edu.pk,0300-1234567,Computer Networks; Algorithms,active,false,2026-01-01T00:00:00Z
+2,FAC-102,Dr. Muhammad Aslam,Associate Professor,Physics,aslam.phy@gdc1.edu.pk,0301-2345678,Quantum Mechanics; Electrodynamics,active,false,2026-01-01T00:00:00Z
+3,FAC-103,Prof. Tariq Bilal,Lecturer,Mathematics,tariq.math@gdc1.edu.pk,0302-3456789,Linear Algebra; Calculus IV,active,false,2026-01-01T00:00:00Z
+4,FAC-104,Dr. Sajid Khan,Assistant Professor,Computer Science,sajid.cs@gdc1.edu.pk,0303-4567890,Operating Systems; Database Systems,active,false,2026-01-01T00:00:00Z
+5,FAC-105,Prof. Irfanullah,Lecturer,Computer Science,irfan.cs@gdc1.edu.pk,0304-5678901,Data Structures & Algorithms,active,false,2026-01-01T00:00:00Z
+6,FAC-106,Prof. Nisar Ahmad,Assistant Professor,Chemistry,nisar.chem@gdc1.edu.pk,0305-6789012,Organic Chemistry; Biochemistry,active,false,2026-01-01T00:00:00Z

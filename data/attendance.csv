@@ -1,0 +1,9 @@
+id,date,class_name,subject_code,student_id,student_name,status,marked_by,created_at
+1,2026-10-25,BSCS-4th-Morning,CS-401,CS-2201,Ali Raza,Present,Prof. Abdur Rehman,2026-10-25T08:30:00Z
+2,2026-10-25,BSCS-4th-Morning,CS-401,CS-2210,Imran Burki,Present,Prof. Abdur Rehman,2026-10-25T08:30:00Z
+3,2026-10-25,BSCS-4th-Morning,CS-401,CS-2215,Muhammad Bilal,Absent,Prof. Abdur Rehman,2026-10-25T08:30:00Z
+4,2026-10-25,BSCS-4th-Morning,CS-401,CS-2204,Hassan Raza,Late,Prof. Abdur Rehman,2026-10-25T08:30:00Z
+5,2026-10-24,BSCS-4th-Morning,CS-402,CS-2201,Ali Raza,Present,Prof. Irfanullah,2026-10-24T09:30:00Z
+6,2026-10-24,BSCS-4th-Morning,CS-402,CS-2210,Imran Burki,Present,Prof. Irfanullah,2026-10-24T09:30:00Z
+7,2026-10-24,BSCS-4th-Morning,CS-402,CS-2215,Muhammad Bilal,Absent,Prof. Irfanullah,2026-10-24T09:30:00Z
+8,2026-10-24,BSCS-4th-Morning,CS-402,CS-2204,Hassan Raza,Excused,Prof. Irfanullah,2026-10-24T09:30:00Z

@@ -1,0 +1,23 @@
+"Student ID","Student Name","Father Name","Department","Session","Semester","Subject Name","Teacher Name",Sessional (6),Mid (18),Terminal (36),Total (60),Subject GPA,Grade,Attendance %,Fine Status,Unpaid Fine,Paid Fine,Overall CGPA
+"CS-2201","Ali Raza","Muhammad Akram","Computer Science","2022-2026","Semester 4","Database Systems","Engr. Waqas",6,18,35,59,4,"A+",95,"Safe",0,0,4.0
+"CS-2201","Ali Raza","Muhammad Akram","Computer Science","2022-2026","Semester 4","Data Structures","Prof. Irfan",5.8,17.5,34,57.3,4,"A+",92,"Safe",0,0,4.0
+"CS-2201","Ali Raza","Muhammad Akram","Computer Science","2022-2026","Semester 4","Operating Systems","Dr. Sajid",5.5,17,33,55.5,3.9,"A",90,"Safe",0,0,4.0
+"CS-2201","Ali Raza","Muhammad Akram","Computer Science","2022-2026","Semester 4","Computer Networks","Prof. Abdur Rehman",5.7,17.2,34.5,57.4,4,"A+",94,"Safe",0,0,4.0
+"CS-2210","Imran Burki","Gulzar Ahmad","Computer Science","2022-2026","Semester 4","Database Systems","Engr. Waqas",5.5,16.5,32,54,3.8,"A",88,"Safe",0,0,3.82
+"CS-2210","Imran Burki","Gulzar Ahmad","Computer Science","2022-2026","Semester 4","Data Structures","Prof. Irfan",5.4,16,31.5,52.9,3.7,"A",85,"Safe",0,0,3.82
+"CS-2210","Imran Burki","Gulzar Ahmad","Computer Science","2022-2026","Semester 4","Operating Systems","Dr. Sajid",5.6,16.8,32.5,54.9,3.8,"A",86,"Safe",0,0,3.82
+"CS-2210","Imran Burki","Gulzar Ahmad","Computer Science","2022-2026","Semester 4","Computer Networks","Prof. Abdur Rehman",5.7,17,33,55.7,3.9,"A",89,"Safe",0,0,3.82
+"CS-2215","Muhammad Bilal","Muhammad Tariq","Computer Science","2022-2026","Semester 4","Database Systems","Engr. Waqas",3.2,9.5,18,30.7,2.1,"C",62,"Danger",1000,0,2.15
+"CS-2215","Muhammad Bilal","Muhammad Tariq","Computer Science","2022-2026","Semester 4","Data Structures","Prof. Irfan",3,9,17.5,29.5,2,"C",58,"Danger",1000,0,2.15
+"CS-2215","Muhammad Bilal","Muhammad Tariq","Computer Science","2022-2026","Semester 4","Operating Systems","Dr. Sajid",3.5,10,19,32.5,2.3,"C",64,"Danger",1000,0,2.15
+"CS-2215","Muhammad Bilal","Muhammad Tariq","Computer Science","2022-2026","Semester 4","Computer Networks","Prof. Abdur Rehman",3.1,9.8,18.5,31.4,2.2,"C",60,"Danger",1000,0,2.15
+"MATH-2201","Usman Farooq","Farooq Ahmad","Mathematics","2022-2026","Semester 4","Linear Algebra","Prof. Qasim",5.6,17,33,55.6,3.9,"A",91,"Safe",0,0,3.88
+"MATH-2201","Usman Farooq","Farooq Ahmad","Mathematics","2022-2026","Semester 4","Calculus IV","Prof. Qasim",5.7,17.2,34,56.9,4,"A+",93,"Safe",0,0,3.88
+"MATH-2208","Hamza Khan","Tariq Mehmood","Mathematics","2022-2026","Semester 4","Linear Algebra","Prof. Qasim",2.8,8.5,16,27.3,1.8,"D",55,"Danger",1000,0,1.85
+"MATH-2208","Hamza Khan","Tariq Mehmood","Mathematics","2022-2026","Semester 4","Calculus IV","Prof. Qasim",2.9,8.7,16.5,28.1,1.9,"D",58,"Danger",1000,0,1.85
+"PHY-2201","Zeeshan Haider","Haider Ali","Physics","2022-2026","Semester 4","Quantum Mechanics","Dr. Rashid",5.4,16.5,32,53.9,3.7,"A",89,"Safe",0,0,3.75
+"PHY-2201","Zeeshan Haider","Haider Ali","Physics","2022-2026","Semester 4","Electrodynamics","Dr. Rashid",5.5,16.8,32.5,54.8,3.8,"A",90,"Safe",0,0,3.75
+"CHEM-2201","Faizan Ahmad","Nisar Ahmad","Chemistry","2022-2026","Semester 4","Organic Chemistry","Dr. Aslam",5.5,16.5,32,54,3.8,"A",88,"Safe",0,0,3.8
+"BOT-2201","Ayesha Bibi","Ghulam Rasool","Botany","2022-2026","Semester 4","Plant Physiology","Prof. Saeed",5.7,17.5,34,57.2,4,"A+",94,"Safe",0,0,3.95
+"ENG-2201","Sana Malik","Malik Riaz","English","2022-2026","Semester 4","Linguistics","Prof. Tahir",5.5,16.5,32.5,54.5,3.8,"A",91,"Safe",0,0,3.85
+"ISL-2201","Hafiz Muhammad Umar","Noor Muhammad","Islamiat","2022-2026","Semester 4","Hadith Studies","Dr. Hafizullah",5.8,17.6,34.5,57.9,4,"A+",95,"Safe",0,0,3.95

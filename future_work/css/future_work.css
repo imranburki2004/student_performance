@@ -1,0 +1,456 @@
+/* 
+ * Stylesheet for Future Work Innovation Suite
+ * Govt. Degree College No. 1, Dera Ismail Khan
+ * Author: Imran (Roll No: CS-2210) | Final Year Project (2022-26)
+ */
+
+:root {
+  --navy-dark: #0a192f;
+  --navy-header: #0e2238;
+  --navy-light: #1e3a8a;
+  --accent-cyan: #06b6d4;
+  --accent-gold: #f59e0b;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-purple: #8b5cf6;
+  
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --bg-light-panel: #ffffff;
+  --text-white: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-dark: #334155;
+  --border-light: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Banner */
+.fw-header {
+  background: var(--navy-header);
+  color: #ffffff;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.fw-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fw-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid #f59e0b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fw-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-top: 0.4rem;
+}
+
+.fw-subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.fw-nav-btn-back {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.fw-nav-btn-back:hover {
+  background: #1d4ed8;
+}
+
+/* Tab Navigation Bar */
+.fw-tab-bar {
+  background: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  overflow-x: auto;
+  padding: 0.5rem 2rem 0 2rem;
+  gap: 0.5rem;
+}
+
+.fw-tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.fw-tab-btn:hover {
+  color: #0284c7;
+  background: #f8fafc;
+  border-radius: 6px 6px 0 0;
+}
+
+.fw-tab-btn.active {
+  color: #0284c7;
+  border-bottom-color: #0284c7;
+  background: #f0f9ff;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Main Container */
+.fw-main {
+  max-width: 1280px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+.fw-tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.fw-tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Containers */
+.fw-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.fw-card-header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fw-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.fw-source-link {
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #2563eb;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #cbd5e1;
+}
+
+/* Grid Layouts */
+.fw-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .fw-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Device Mockups: Smartphone */
+.phone-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.phone-mockup {
+  width: 320px;
+  height: 600px;
+  background: #000000;
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25), inset 0 0 2px rgba(255,255,255,0.4);
+  position: relative;
+}
+
+.phone-notch {
+  width: 120px;
+  height: 18px;
+  background: #000000;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 12px 12px;
+  z-index: 10;
+}
+
+.phone-screen {
+  background: #f8fafc;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat & Notification Bubbles */
+.sms-chat-header {
+  background: #0e2238;
+  color: #ffffff;
+  padding: 24px 12px 10px 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.sms-messages-area {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.sms-bubble {
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 12px 12px 12px 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: #1e293b;
+  border-left: 3px solid #0284c7;
+  animation: slideUp 0.3s ease;
+}
+
+.sms-time {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* RFID Reader Terminal Mockup */
+.rfid-hardware-box {
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border: 2px solid #334155;
+}
+
+.rfid-lcd-screen {
+  background: #064e3b;
+  color: #6ee7b7;
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  border: 4px solid #022c22;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rfid-tap-target {
+  width: 140px;
+  height: 140px;
+  border: 3px dashed #38bdf8;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(56, 189, 248, 0.08);
+  transition: all 0.25s ease;
+}
+
+.rfid-tap-target:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: scale(1.04);
+}
+
+.rfid-tap-target.pulsing {
+  animation: pulseScan 0.5s infinite alternate;
+}
+
+@keyframes pulseScan {
+  from { border-color: #38bdf8; box-shadow: 0 0 10px #38bdf8; }
+  to { border-color: #10b981; box-shadow: 0 0 20px #10b981; }
+}
+
+/* Form Elements */
+.fw-input-group {
+  margin-bottom: 1rem;
+}
+
+.fw-input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.35rem;
+}
+
+.fw-input, .fw-select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #ffffff;
+}
+
+.fw-input:focus, .fw-select:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.fw-btn {
+  background: #0284c7;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.fw-btn:hover {
+  background: #0369a1;
+}
+
+.fw-btn-success {
+  background: #10b981;
+}
+.fw-btn-success:hover {
+  background: #059669;
+}
+
+/* Metric Display Callouts */
+.fw-metric-callout {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.fw-metric-callout .val {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.fw-metric-callout .lbl {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+/* Receipt Display */
+.receipt-paper {
+  background: #fffbeb;
+  border: 1px dashed #d97706;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+.receipt-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.fw-footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: auto;
+}

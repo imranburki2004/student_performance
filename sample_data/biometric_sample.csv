@@ -1,0 +1,6 @@
+device_user_id,student_id,timestamp,device_id,punch_type,status
+101,CS-2201,2026-10-25 08:24:12,BIO-DEV-01,IN,Present
+102,CS-2210,2026-10-25 08:28:45,BIO-DEV-01,IN,Present
+103,CS-2204,2026-10-25 08:52:10,BIO-DEV-01,IN,Late
+104,CS-2215,2026-10-25 09:15:00,BIO-DEV-02,IN,Late
+105,CS-2220,2026-10-25 08:30:00,BIO-DEV-01,IN,Present

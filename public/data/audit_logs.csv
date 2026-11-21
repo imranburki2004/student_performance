@@ -1,0 +1,6 @@
+id,timestamp,action,entity_type,entity_id,operator,details,status
+1,2026-10-25T08:15:00Z,SYSTEM_BOOT,System,CORE,SYSTEM,Zero-SQL Storage Initialized,SUCCESS
+2,2026-10-25T08:30:00Z,ATTENDANCE_SESSION,Attendance,BSCS-4th,Prof. Abdur Rehman,Session attendance recorded for 20 students,SUCCESS
+3,2026-10-25T09:12:00Z,FINE_ASSESSMENT,Fine,CS-2204,System,Short attendance deficit fine of Rs. 1000 assessed,SUCCESS
+4,2026-10-25T09:42:00Z,FINE_COLLECTION,Fine,CS-2204,Admin (Imran),Collected Rs. 1000 fine via cash receipt #REC-401,SUCCESS
+5,2026-10-25T10:15:00Z,TRANSCRIPT_GENERATION,Report,CS-2201,Admin (Imran),Generated official DMC transcript,SUCCESS
